@@ -1,0 +1,29 @@
+Scanner money = new Scanner(System.in);
+System.out.println("What was total on the bill? ");
+double bill = Double.valueOf(money.nextLine());
+
+
+
+
+Scanner num = new Scanner(System.in);
+System.out.println("How many people in your party? ");
+int people = Integer.valueOf(num.nextLine());
+
+
+
+
+Scanner perc = new Scanner(System.in);
+System.out.println("What percentage is your party tipping? (Enter a whole number with no symbols.) ");
+double tip = (bill * (Double.valueOf(perc.nextLine()))) / 100;
+
+
+System.out.println("--------------------------------");
+System.out.println("|Total tip amount: $" + String.format("%.2f", tip) + "      |");
+System.out.println("--------------------------------");
+System.out.println("|Total bill cost: $" + String.format("%.2f", (bill + tip)) + "      |");
+System.out.println("--------------------------------");
+System.out.println("|Total tip per person: $" + String.format("%.2f", (tip / people))+ "   |");
+System.out.println("--------------------------------");
+System.out.println("|Total bill per person: $" + String.format("%.2f", ((bill + tip) / people)) + " |");
+System.out.println("--------------------------------");
+
